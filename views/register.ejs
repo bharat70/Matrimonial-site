@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>start</title>
+	<link rel="stylesheet" type="text/css" href="CSS/styles.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Krub:300,400" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/Capture.PNG">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style type="text/css">
+       #Register{
+       	position:relative;	
+       	opacity:0.8;
+       	margin-top:7%;
+       	margin-left:35%;
+       	width:30%;
+       	height:80vmin;
+        border-bottom: 15%; 
+        background-color: lightgrey;
+        border-radius: 1vmin;
+        padding: 2vmin;
+       }
+        #Form {
+        position:relative;
+        z-index:2;
+        border-bottom: 15%; 
+        margin-top:0%;
+        margin-left:3%;
+        width:90%;
+        height:40vmin;  
+        background-color: lightgrey;
+        border-radius: 10px;
+        padding: 15px 15px;
+        padding-bottom:15px;
+        padding-top: 15px;
+       }
+       .slideShow{
+       	   position:relative;
+           width:100vw;
+           height:650px;
+           margin-top:-99vmin/*-650px*/;
+           z-index: -1;
+       }
+       .controls{
+       	  position:absolute;
+       	  top:50%;
+       	  left:2%;
+       	  z-index:2;
+       }
+       #rightCtrl{
+           left:96%;
+       }
+       .slides >img{
+           position: absolute;/**/
+           left:0%;
+           width:100%;
+           top:2%;
+           height:110%;
+
+       }
+       button {
+        background-color: black;
+        border-radius: 5px;
+        color: white;
+        padding: 10px 10px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+        width:100%;
+        font-size: 1.5vw;
+        padding-right : 5%;
+        }
+        #btns{
+          margin-right:20px;
+        }
+        .Team {
+          position: absolute;
+          left:35%;
+          top:30%;
+          width:15vmin;
+          height:15vmin;
+          border-radius:50%;
+          border:2px solid #323438;
+        }
+        #img2{
+          position: absolute;
+          left:45%;
+        }
+        #img3{
+          position: absolute;
+          left:55%;
+        }
+        #vam,#nit,#mad{
+          position: absolute;
+          left:37%;
+          top:43%;
+          color: white;
+        }
+        #nit{
+           left:47%;
+        }
+        #mad{
+          left:57%;
+        }
+        #copyrights{
+          position:absolute;
+          left:2%;
+          top:70%;
+          font-size:1.6vmin;
+          color:white;
+
+        }
+        #version{
+          position:absolute;
+          left:2%;
+          top:76%;
+          font-size:1.6vmin;
+          color:white;
+        }
+        #teamId{
+          position: absolute;
+          left:25%;
+          top:90%;
+          font-size:2vmin;
+          color:cyan;
+          letter-spacing:1px;
+        }
+        .heart-color{
+          color:red;
+        }
+       #mailTxt{
+         position: absolute;
+         left:20%;
+         top:30%;
+         font-size:2.5vmin;
+         color:#ff6600;
+         letter-spacing:1px;
+       }
+       #gmailIcon{
+         position: absolute;
+         left:50%;
+         top:31%;
+         font-size:2.2vmin;
+         color:grey;
+       }
+       .gmail{
+         color :red;
+       }
+      
+        #sm{
+        position: absolute;
+        left:30%;
+        top:55%;
+        font-size:2.5vmin;
+        font-family:monospace;
+        letter-spacing:6px;
+        color: white;
+       }
+       #fIcon,#iIcon{
+          position: absolute;
+          left:40%;
+          top:65%;
+          width:10%;
+          height:10%;
+          
+       }
+       .fCol{
+          color: #66a3ff;
+          font-size: 20px;
+       }
+       #fIcon > button{
+          border:none;
+          background-color:#323438;
+       }
+       #iIcon{
+           color: white;
+           left:60%;
+       }
+       .iCol{
+          font-size:20px;
+          color: #ff5050;
+
+       }
+       #iIcon >button{
+          border:none;
+          background-color:#323438;
+       }
+          
+       *:focus{
+        outline:none;
+       }
+       body{
+        overflow-x: hidden;
+        scroll-behavior:smooth;
+       }
+       input[type=email], input[type=password], input[type=text] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 2px;
+        border-radius: 4px;
+       }
+       textarea, input[type=date], datalist, input[type=number], #motherTongue{
+        width: 100%;
+        padding: 10px 15px;
+        margin: 4px 0;
+        box-sizing: border-box;
+        border: 2px;
+        border-radius: 4px;
+       }
+      input:focus, textarea:focus {
+      border: 3px solid #555;
+      }
+      #radio{
+        position: relative;
+        margin-top: -20px;
+      }
+      #privacy{
+        position: relative;
+        margin-top: -4px;
+      }
+      ::placeholder, #radiotxt, b{
+        font-size: 1.25vw;
+        font-family: 'Krub', sans-serif;
+        color:black;
+      }
+      #maleRadio{
+        margin: 0 20px 0 50px;
+      }
+      #femaleRadio{
+        margin: 0 100px 0 20px;
+      }
+      #pvtRadio{
+        margin: 0 20px 0 20px;
+      }
+      input[type=button], input[type=submit], #submitA ,#submitB, #submitC {
+      background-color: black;
+      border-radius: 5px;
+      color: white;
+      padding: 10px 10px;
+      text-decoration: none;
+      margin: 4px 2px;
+      cursor: pointer;
+      width:100%;
+      font-size: 1.5vw;
+      padding-right : 5%;
+      }
+      input[type=button]:hover, input[type=submit]:hover ,#submitA:hover ,#submitB:hover, #submitC:hover{
+      background-color: white; /* Green */
+      color: black;
+      border:2px solid black;
+      cursor: pointer;
+      }
+      *:focus{
+        outline:none;
+      }
+    </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>settle</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="/css/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="/css/jquery.mCustomScrollbar.min.css">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <link rel="stylesheet" href="https://rawgit.com/LeshikJanz/libraries/master/Bootstrap/baguetteBox.min.css">
+</head>
+<body>
+  <div id="myHeader" class="header diki">
+    <div class="container">
+       <div class="row">
+          <div class="col-md-10 col-sm-12">
+             <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarsExample04">
+                   <ul class="navbar-nav mr-auto">
+                      <li class="nav-item active">
+                         <a class="nav-link" href="/">Home</a>
+                      </li>
+                      <li class="nav-item">
+                         <a class="nav-link" data-page="about" href="#">About</a>
+                      </li>
+                      <li class="nav-item">
+                         <a class="nav-link" data-page="gal" href="#">Gallery</a>
+                      </li>
+                      <li class="nav-item">
+                         <a class="nav-link" href="/register">Register</a>
+                      </li>
+                      <li class="nav-item">
+                         <a class="nav-link" href="#" data-page="contact">Contact Us</a>
+                      </li>
+                      <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+                   </ul>
+                </div>
+             </nav>
+          </div>
+       </div>
+    </div>
+ </div>
+   <div id="Register">
+   	   <form id="Form"  action="/register" method="POST">
+   	   	<div id="rForm1" ng-app="signA" ng-controller="ctrlA" name="formA">
+            <b style="color:green;">Please fill your details here</b>
+   	   	   <input type="text" id="fname" name="fname" placeholder="First Name" ng-model="fname" required>
+   	   	   <span style="color:red" ng-show="formA.fname.$dirty && formA.fname.$invalid"><span ng-show="formA.fname.$error.required">First Name is required</span></span><br>
+   	   	   <input type="text" id="lname" name="lname" placeholder="Last Name" ng-model="lname" required>
+   	   	   <span style="color:red" ng-show="formA.lname.$dirty && formA.lname.$invalid"><span ng-show="formA.lname.$error.required">Last Name is required</span></span><br>
+   	   	   <input type="text" id="pname" name="pname" placeholder="Profile Name" ng-model="pname" required>
+   	   	   <span style="color:red" ng-show="formA.pname.$dirty && formA.pname.$invalid"><span ng-show="formA.pname.$error.required">Profile Name is required</span></span>
+           <div><span style="color:red;"><i><%= pnameTaken %></i></span></div>
+           <br><div id="radio">
+           <span  id="maleRadio"><input type="radio" name="gender" id="gender" value="male"> <b id="radiotxt" >Male</b></span>
+           <span id="femaleRadio"><input type="radio" name="gender" id="gender" value="female" > <b id="radiotxt">Female</b><br></span></div>
+   	   	   <input type="email" id="email" name="email" placeholder="Email" ng-model="email" required><span style="color:red" ng-show="formA.email.$dirty && formA.email.$invalid"><span ng-show="formA.email.$error.required">Email is required</span></span><br>
+           <div><span style="color:red;"><i><%= emailTaken %></i></span></div>
+   	       <input type="password" id="password" name="password" placeholder="Password" ng-model="password" required><span style="color:red" ng-show="formA.password.$dirty && formA.password.$invalid"><span ng-show="formA.password.$error.required">Password is required</span></span><br>
+   	       <input type="password" id="repassword" name="repassword" placeholder="Re-Enter Password" ng-model="rPassword" required><span style="color:red" ng-show="formA.rPassword.$dirty && formA.rPassword.$invalid"><span ng-show="formA.rPassword.$error.required">reEnterPassword is required</span></span><br>
+           <button type="button" id="submitA">proceed</button>
+   	   </div>
+   	   <div id="rForm2" ng-app="signB" ng-controller="ctrlB" name="formB">
+   	   	   <textarea rows="5" cols="36" name="description" placeholder="describe yourself" ></textarea>
+   	   	   <input type="date" name="DOB" ng-model="date" placeholder="dd/mm/yyyy"required><span style="color:red" ng-show="formB.DOB.$dirty && formB.DOB.$invalid"><span ng-show="formB.DOB.$error.required">D-O-B is required</span></span><br>
+   	   	   <input type="text" list="religions" name="religion" placeholder="religion" ng-model="religion">
+   	   	   <datalist id="religions">
+   	   	   	    <option value="Hindu">
+   	   	   	    <option value="Muslim">
+                <option value="Christian">
+                <option value="Sikh">
+                <option value="No Religion">
+                <option value="Spiritual">
+                <option value="Other">
+   	   	   </datalist>
+   	   	   <input type="text" id="motherTongue" list="motherTongueList" name="motherTongue" placeholder="Mother Tongue" ng-model="motherTongue">
+   	   	   <datalist id="motherTongueList">
+   	   	   	    <option value="Hindi">
+   	   	   	    <option value="Telugu">
+                <option value="English">
+                <option value="Assameese">
+                <option value="Bihari">
+                <option value="urdu">
+                <option value="Tamil">
+                <option value="Malayali">
+                <option value="Gujarathi">
+                <option value="Foreign language">
+                <option value="Other">
+   	   	   </datalist>
+   	   	   <input type="number" name="userHeight" placeholder="height( in cm )" ng-model="height" required><span style="color:red" ng-show="formB.height.$dirty && formB.height.$invalid"><span ng-show="formB.height.$error.required">Height is required</span></span><br>
+   	   	   <input type="text" list="status" name="mStatus" placeholder="Marital Status" ng-model="mStatus" required><span style="color:red" ng-show="formB.mStatus.$dirty && formB.mStatus.$invalid"><span ng-show="formB.mStatus.$error.required">Field is required</span></span><br>
+   	   	   <datalist id="status">
+   	   	   	    <option value="Never Married">
+   	   	   	    <option value="Married Early">
+   	   	   	    <option value="Divorced">
+   	   	   	    <option value="Widow">
+   	   	   </datalist>
+           <div id="privacy">
+           <span id="pvtRadio" ><input type="radio" name="privacy" value="1"><b id="radiotxt" >privacy</b></span>
+           <span id="pvtRadio" ><input type="radio" name="privacy" value="0"><b id="radiotxt" >public</b></span>
+           </div>
+           <button type="button" id="submitB" >oneStep</button>
+   	   </div>
+   	   <div id="rForm3">
+   	   	    <input type="text" name="qualification" placeholder="qualification">
+   	   	    <input type="text" name="college" placeholder="college/university">
+   	   	    <input type="text" name="occupation" placeholder="Occupation">
+   	   	    <input type="text" name="country" placeholder="country">
+   	   	    <input type="number" name="salary" placeholder="salary(INR)">
+   	   	    <input type="submit" name="submitC" value="Register" id="submitC">
+   	   </div>
+   	   </form>
+   </div>
+   <div class="slideShow">
+   	   <div class="slides"> 
+   	   	 <img style="opacity:1" src="/images/leslie-rose-kit-harington.jpg">
+   	   </div>
+   	   <div class="slides">
+   	   	 <img  style="opacity:1" src="images/viruska.jpg">
+   	   </div>
+   	   <div class="slides">
+   	   	 <img  style="opacity:1" src="images/harry-meghan.jpg">
+   	   </div>
+   	   <div class="slides">
+   	   	 <img  style="opacity:1" src="images/chaisam.jpg">
+   	   </div>
+   	   <a class="controls" onclick="nextSlide(+1)"><h2>&#10094;&#10094;</h2></a>
+       <a class="controls" id="rightCtrl" onclick="nextSlide(-1)"><h2>&#10095;&#10095;</h2></a>
+   </div>
+
+   <script type="text/javascript">
+   	  var appA=angular.module('signA',[]);
+   	  appA.controller('ctrlA',function($scope){
+
+   	  });
+   	  var appB=angular.module('signB',[]);
+   	  appB.controller('ctrlB',function($scope){
+
+   	  });
+   	  angular.bootstrap(document.getElementById("rForm2"),['signB']);
+     
+	  
+   </script>
+   <!--<footer>DBMS MATRIMONY</footer>-->
+</body>
+<script type="text/javascript">
+	  var slideIndex=1;
+	  var factor=1;
+	  switchSlides(slideIndex);
+            
+            setInterval(function addSlide()
+            {
+            	console.log("called");
+            	slideIndex+=factor;
+            	console.log(slideIndex);
+            	switchSlides(slideIndex);
+            	 
+            },5000);
+            function switchSlides(n)
+            {
+            	console.log("wat");
+               var slides=document.getElementsByClassName("slides");
+               if(n>slides.length)
+               	  slideIndex=1;
+               	if(n<1)
+               		slideIndex=slides.length;
+               	for(var i=0;i<slides.length;i++)
+               		slides[i].style.display="none";
+               	slides[slideIndex-1].style.display="block";
+            }
+            function nextSlide(x)
+            {
+            	slideIndex+=x;
+            	switchSlides(slideIndex);
+            }
+	       $(document).ready(function(){
+                $("#rForm2").hide();
+                $("#rForm3").hide();
+                $("#submitA").click(function(){
+                  var password = $("#password").val();
+                  var confirmPassword = $("#repassword").val();
+                  var email = $("#email").val();
+                  var pname = $("#pname").val();
+                  var fname = $("#fname").val();
+                  var lname = $("#lname").val();
+                  var gender = $("#gender").val();
+                  console.log(gender);
+                  console.log(password);
+                  console.log(confirmPassword);
+                  if(email.length==0 || pname.length==0 || fname.length==0 || lname.length==0 || password.length==0 ||gender.length==0)
+                  {
+                    alert("Insufficient Credentials");
+                  }
+                  if (password != confirmPassword) {
+                    alert("Passwords do not match.");
+                  }
+                  else{
+                      $("#rForm1").hide();
+                      $("#rForm2").show();
+                  }
+                });
+                $("#submitB").click(function(){
+                      $("#rForm2").hide();
+                        $("#rForm3").show();
+                });
+             $("#vam,#nit,#mad").css("display","none");
+             $("#img1,#vam").hover(function(){
+                 $("#img1").css("opacity","0.6");
+                 $("#vam").css("display","block");
+                 $("#img1").css("border","2px solid #ff6600");
+             },
+             function(){
+                $("#img1").css("opacity","1");
+                $("#vam").css("display","none");
+                $("#img1").css("border","2px solid #323438");
+             }
+             );
+             $("#img2,#nit").hover(function(){
+                 $("#img2").css("opacity","0.6");
+                 $("#nit").css("display","block");
+                 $("#img2").css("border","2px solid #ff6600");
+             },
+             function(){
+                $("#img2").css("opacity","1");
+                $("#nit").css("display","none");
+                $("#img2").css("border","2px solid #323438");
+             }
+             );
+             $("#img3,#mad").hover(function(){
+                 $("#img3").css("opacity","0.6");
+                 $("#mad").css("display","block");
+                 $("#img3").css("border","2px solid #ff6600");
+             },
+             function(){
+                $("#img3").css("opacity","1");
+                $("#mad").css("display","none");
+                $("#img3").css("border","2px solid #323438");
+             }
+             );
+             $("#fIcon").hover(function(){
+                 $(".fCol").css("font-size","30px");
+             },
+             function(){
+                $(".fCol").css("font-size","20px");
+             }
+             );
+              $("#iIcon").hover(function(){
+                 $(".iCol").css("font-size","30px");
+             },
+             function(){
+                $(".iCol").css("font-size","20px");
+             }
+             );
+         });
+         var password = document.getElementById("password");
+  var confirm_password = document.getElementById("repassword");
+  var submitA = document.getElementById("submitA");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+var email=document.getElementById("email").value;
+submitA.onclick = validateEmail(email);
+submitA.onclick = validatePassword;
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+//submitA.onclick = validateEmail(email);
+function validateEmail(emailField){
+        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+        if (reg.test(emailField.value) == false) 
+        {
+            alert('Invalid Email Address');
+            return false;
+        }
+        return true;
+}
+</script>
+</html>

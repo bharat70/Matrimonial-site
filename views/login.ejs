@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>start</title>
+  <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+  <title>Matrimony Start Page</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Krub:300,400" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/Capture.PNG">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <style type="text/css">
+       #header{
+       position:fixed;
+       top:0%;
+       width:100vw;
+       height:10vmin;
+       background:linear-gradient(to right,#538282,#576363);
+
+       }
+        #header img{
+        float: left;
+        width: 8vw;;
+        height: 7.5vh;
+        background: #555;
+        cursor: pointer;
+        margin-left: 0.5vw;
+        margin-top:0.5%;
+        /*border-radius: 15px;*/
+        } 
+       .icons{
+          color:white;
+          float:right;
+          width:8%;
+          background:linear-gradient(to right,#538282,#576363);
+          padding: 2px;
+          margin-top: 0.75em;
+          margin-left:0.5em;
+          border:1px solid grey;
+       }
+       .icons:hover {
+        background-color: white;
+        color:#ff6600;;
+       }
+       .headerDiv{
+        text-align: center;
+        font-size: 1.25vw;
+        font-family: 'Krub', sans-serif;
+       }
+       #Login{
+        
+        position:relative;
+        z-index:2;
+        border-bottom: 15%; 
+        margin-top:10%;
+        margin-left:35%;
+        width:30%;
+        height:45vmin;  
+        background-color: lightgrey;
+        border-radius: 1vmin;
+        padding: 2vmin;
+        opacity:0.8;
+       }
+        #Form {
+         background-color:black;
+       }
+       .slideShow{
+           position:relative;
+           width:100vw;
+           height:80vmin;
+           margin-top:-76.5vmin/*-500px*/;
+           z-index: -1;
+       }
+       .controls{
+          position:absolute;
+          top:50%;
+          left:2%;
+          z-index:2;
+       }
+       #rightCtrl{
+           left:96%;
+       }
+       .slides >img{
+           position: absolute;/**/
+           z-index:-1;
+           left:0%;
+           width:100%;
+           top:95.6%;
+           height:110%; /**/
+
+       }
+       input[type=email] ,input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 2px;
+        border-radius: 4px;
+       }
+      input[type=email]:focus ,input[type=password]:focus {
+      border: 3px solid #555;
+      }
+      input[type=button], input[type=submit] {
+      background-color: black;
+      border-radius: 5px;
+      color: white;
+      padding: 10px 10px;
+      text-decoration: none;
+      margin: 4px 2px;
+      cursor: pointer;
+      width:100%;
+      font-size: 1.5vw;
+      padding-right : 5%;
+      }
+      
+        #img2{
+          position: absolute;
+          left:45%;
+        }
+        #img3{
+          position: absolute;
+          left:55%;
+        }
+        #vam,#nit,#mad{
+          position: absolute;
+          left:37%;
+          top:43%;
+          color: white;
+        }
+        #nit{
+           left:47%;
+        }
+        #mad{
+          left:57%;
+        }
+        #copyrights{
+          position:absolute;
+          left:2%;
+          top:70%;
+          font-size:1.6vmin;
+          color:white;
+
+        }
+        #teamId{
+          position: absolute;
+          left:25%;
+          top:90%;
+          font-size:2vmin;
+          color:cyan;
+          letter-spacing:1px;
+        }
+        #version{
+          position:absolute;
+          left:2%;
+          top:76%;
+          font-size:1.6vmin;
+          color:white;
+        }
+        .heart-color{
+          color:red;
+        }
+        #Feedback{
+          position: absolute;
+          left:65%;
+          width:35%;
+          height:100%;
+
+       }
+       #FeedbackHead{
+          position: absolute;
+          left:45%;
+          top:10%;
+          color:white;
+          font-family:sans-serif;
+          font-size:3vmin;
+
+       }
+       #mailTxt{
+         position: absolute;
+         left:20%;
+         top:30%;
+         font-size:2.5vmin;
+         color:#ff6600;
+         letter-spacing:1px;
+       }
+       #gmailIcon{
+         position: absolute;
+         left:50%;
+         top:31%;
+         font-size:2.2vmin;
+         color:grey;
+       }
+       .gmail{
+         color :red;
+       }
+      
+        #sm{
+        position: absolute;
+        left:30%;
+        top:55%;
+        font-size:2.5vmin;
+        font-family:monospace;
+        letter-spacing:6px;
+        color: white;
+       }
+       #fIcon,#iIcon{
+          position: absolute;
+          left:40%;
+          top:65%;
+          width:10%;
+          height:10%;
+          
+       }
+       .fCol{
+          color: #66a3ff;
+          font-size: 20px;
+       }
+       #fIcon > button{
+          border:none;
+          background-color:#323438;
+       }
+       #iIcon{
+           color: white;
+           left:60%;
+       }
+       .iCol{
+          font-size:20px;
+          color: #ff5050;
+
+       }
+       #iIcon >button{
+          border:none;
+          background-color:#323438;
+       }
+          
+       *:focus{
+        outline:none;
+       }
+       body{
+        overflow-x: hidden;
+        scroll-behavior:smooth;
+       }
+      input[type=button]:hover, input[type=submit]:hover {
+      background-color: white; /* Green */
+      color: black;
+      border:2px solid black;
+      }
+      b{
+        font-size: 1.25vw;
+        font-family: 'Krub', sans-serif;
+      }
+      *:focus{
+        outline:none;
+      }
+    </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>settle</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="/css/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="/css/jquery.mCustomScrollbar.min.css">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <link rel="stylesheet" href="https://rawgit.com/LeshikJanz/libraries/master/Bootstrap/baguetteBox.min.css">
+</head>
+<body>
+  <div id="myHeader" class="header diki">
+    <div class="container">
+       <div class="row">
+          <div class="col-md-13 col-sm-12">
+             <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarsExample04">
+                   <ul class="navbar-nav mr-auto">
+                      <li class="nav-item active">
+                         <a class="nav-link" href="#">Home</a>
+                      </li>
+                      <li class="nav-item">
+                         <a class="nav-link" data-page="about" href="#">About</a>
+                      </li>
+                      <li class="nav-item">
+                         <a class="nav-link" data-page="gal" href="#">Gallery</a>
+                      </li>
+                      <li class="nav-item">
+                         <a class="nav-link" href="/register">Register</a>
+                      </li>
+                      <li class="nav-item">
+                         <a class="nav-link" href="#" data-page="contact">Contact Us</a>
+                      </li>
+                      <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+                   </ul>
+                </div>
+             </nav>
+          </div>
+          <div class="col-md-2">
+             <div class="sealo">
+                <ul>
+                   <!-- <li><a href="Javascript:void(0)"><i class="fa fa-search"></i></a></li> -->
+                   <!-- <li><a href="/login">Login</a></li> -->
+                </ul>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+   <div class="slideShow">
+       <div class="slides"> 
+         <img style="opacity:1" src="/images/leslie-rose-kit-harington.jpg">
+       </div>
+       <div class="slides">
+         <img  style="opacity:1" src="images/viruska.jpg">
+       </div>
+       <div class="slides">
+         <img  style="opacity:1" src="images/harry-meghan.jpg">
+       </div>
+       <div class="slides">
+         <img  style="opacity:1" src="images/chaisam.jpg">
+       </div>
+       <a class="controls" onclick="nextSlide(+1)"><h2>&#10094;&#10094;</h2></a>
+       <a class="controls" id="rightCtrl" onclick="nextSlide(-1)"><h2>&#10095;&#10095;</h2></a>
+   </div>
+   <div id="Login">
+    <span style="color:red;"><i><%= loginAgain %></i></span>
+      <form id="loginForm" action="/login" method="POST">
+        <b>Email </b><input type="email" name="userEmail"><br>
+        <b>Password </b><input type="password" name="userPassword"><br>
+        <div>
+          <span style="color:red;"><i><%= passwordIncorrect %></i></span>
+          <span style="color:green;"><i><%= userNotRegistered %></i></span>
+        </div>
+        <input type="submit" name="login" value="LOGIN">
+      </form>
+   </div>
+    
+   <script type="text/javascript">
+      var appA=angular.module('signA',[]);
+      appA.controller('ctrlA',function($scope){
+
+      });
+      var appB=angular.module('signB',[]);
+      appB.controller('ctrlB',function($scope){
+
+      });
+      angular.bootstrap(document.getElementById("rForm2"),['signB']);
+     
+    
+   </script>
+   <!--<footer>DBMS PROJECT TEAM MATRIMONY</footer>-->
+</body>
+<script type="text/javascript">
+    var slideIndex=1;
+    var factor=1;
+    switchSlides(slideIndex);
+            
+            setInterval(function addSlide()
+            {
+              console.log("called");
+              slideIndex+=factor;
+              console.log(slideIndex);
+              switchSlides(slideIndex);
+               
+            },5000);
+            function switchSlides(n)
+            {
+              console.log("wat");
+               var slides=document.getElementsByClassName("slides");
+               if(n>slides.length)
+                  slideIndex=1;
+                if(n<1)
+                  slideIndex=slides.length;
+                for(var i=0;i<slides.length;i++)
+                  slides[i].style.display="none";
+                slides[slideIndex-1].style.display="block";
+            }
+            function nextSlide(x)
+            {
+              slideIndex+=x;
+              switchSlides(slideIndex);
+            }
+         $(document).ready(function(){
+
+            $("#FeedbackIcon").click(function(){
+            $('html,body').animate({
+                scrollTop:$("#Feedback").offset().top
+            },1500);
+            });
+             $("#AboutIcon").click(function(){
+            $('html,body').animate({
+                scrollTop:$("#About").offset().top
+            },1500);
+        });
+             $("#AboutUs").hover(function(){
+                 $("#AboutUs").css("border-bottom","2px solid #ff6600");
+             },
+             function(){
+                $("#AboutUs").css("border-bottom","none");
+             }
+             );
+             $("#AboutTeam").hover(function(){
+                 $("#AboutTeam").css("border-bottom","2px solid #ff6600");
+             },
+             function(){
+                $("#AboutTeam").css("border-bottom","none");
+             }
+             );
+             $("#FeedbackHead").hover(function(){
+                 $("#FeedbackHead").css("border-bottom","2px solid #ff6600");
+             },
+             function(){
+                $("#FeedbackHead").css("border-bottom","none");
+             }
+             );
+             $("#vam,#nit,#mad").css("display","none");
+             $("#img1,#vam").hover(function(){
+                 $("#img1").css("opacity","0.6");
+                 $("#vam").css("display","block");
+                 $("#img1").css("border","2px solid #ff6600");
+             },
+             function(){
+                $("#img1").css("opacity","1");
+                $("#vam").css("display","none");
+                $("#img1").css("border","2px solid #323438");
+             }
+             );
+             $("#img2,#nit").hover(function(){
+                 $("#img2").css("opacity","0.6");
+                 $("#nit").css("display","block");
+                 $("#img2").css("border","2px solid #ff6600");
+             },
+             function(){
+                $("#img2").css("opacity","1");
+                $("#nit").css("display","none");
+                $("#img2").css("border","2px solid #323438");
+             }
+             );
+             $("#img3,#mad").hover(function(){
+                 $("#img3").css("opacity","0.6");
+                 $("#mad").css("display","block");
+                 $("#img3").css("border","2px solid #ff6600");
+             },
+             function(){
+                $("#img3").css("opacity","1");
+                $("#mad").css("display","none");
+                $("#img3").css("border","2px solid #323438");
+             }
+             );
+             $("#fIcon").hover(function(){
+                 $(".fCol").css("font-size","30px");
+             },
+             function(){
+                $(".fCol").css("font-size","20px");
+             }
+             );
+              $("#iIcon").hover(function(){
+                 $(".iCol").css("font-size","30px");
+             },
+             function(){
+                $(".iCol").css("font-size","20px");
+             }
+             );
+         });
+          
+   
+
+</script>
+</html>
